@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="72">
+    <author>DB Modding</author>
+	<contributor>Razor Modding Team</contributor>
+    <version>1.2.0.0</version>
+    <title>
+        <en>Rostselmash Torum  740</en>
+        <ru>Rostselmash Torum  740</ru>
+    </title>
+    <description>
+	
+		<ru>
+		    <![CDATA[
+Цена: 285000 €
+мощность двигателя: 490 л.с. 
+максимальная скорость: 33 км / ч
+объем зернового бака: 12000 л объем
+топливного бака: 850 л
+
+Конфигурации:
+- колеса;
+- выбор трансмиссии;
+- выбор цвета жаток.
+]]>
+		</ru>
+        <en>
+            <![CDATA[
+Price: 285000 €
+engine power: 490 hp
+maximum speed: 33 km / h
+grain tank capacity: 12000l
+fuel tank capacity: 850l
+
+Configurations:
+- wheels
+]]>
+        </en>
+        <de>
+            <![CDATA[
+Preis: 285.000 €
+Motorleistung: 490 PS
+Höchstgeschwindigkeit: 33 km / h
+Kornbehälterkapazität: 12000l
+Kraftstofftankinhalt: 850l
+
+Konfigurationen:
+- Räder
+]]>
+        </de>
+        <fr>
+            <![CDATA[
+Prix: 285000 €
+Puissance moteur: 490 ch
+Vitesse maximale: 33 km / h
+Capacité du réservoir à grains: 12000l
+Capacité du réservoir de carburant: 850l
+
+Configurations:
+- roues
+]]>
+        </fr>
+		<pl>
+            <![CDATA[
+Cena: 285000 €
+Moc silnika: 490 km
+Maksymalna prędkość: 33 km / h
+Pojemność zbiornika na ziarno: 12000l
+Pojemność zbiornika paliwa: 850l
+
+Konfiguracje:
+- koła
+]]>
+        </pl>
+    </description>	
+	
+    <iconFilename>huds/icon_rsmTorum760.png</iconFilename>
+    <multiplayer supported="true" />
+	
+	<l10n>
+		<text name="configuration_design_1"> <en>Design 1</en> <ru>Дизайн 1</ru> </text>
+		<text name="configuration_design_2"> <en>Design 2</en> <ru>Дизайн 2</ru> </text>
+		<text name="configuration_design_3"> <en>Design 3</en> <ru>Дизайн 3</ru> </text>
+		<text name="configuration_transmission"> <en>Transmission choosing</en> <ru>Выбор трансмиссии</ru> </text>
+		<text name="hydro"> <en>Hydrostatic</en> <ru>Гидростатическая</ru> </text>
+		<text name="CVT"> <en>Variator</en> <ru>Вариатор</ru> </text>		
+		<text name="width_cutter">     <en>Width Cutter</en> <de>Spannweite Schneidwerk</de> <ru>Ширина жатки</ru></text>
+	    <text name="5m_1">            <en>5m execution 1</en> <de>5m Ausführung 1</de> <ru>5м исполнение 1</ru></text>
+	    <text name="6_7m_1">          <en>6-7m execution 1</en> <de>6-7m Ausführung 1</de> <ru>6-7м исполнение 1</ru></text>
+	    <text name="8_9m_1">          <en>8-9m execution 1</en> <de>8-9m Ausführung 1</de> <ru>8-9м исполнение 1</ru></text>
+	    <text name="5m_2">            <en>5m execution 2</en> <de>5m Ausführung 2</de> <ru>5м исполнение 2</ru></text>
+	    <text name="6_7m_2">          <en>6-7m execution 2</en> <de>6-7m Ausführung 2</de> <ru>6-7м исполнение 2</ru></text>
+	    <text name="8_9m_2">          <en>8-9m execution 2</en> <de>8-9m Ausführung 2</de> <ru>8-9м исполнение 2</ru></text>	
+		<text name="configuration_number">                  <en>Number</en>       <ru>Порядковый номер</ru></text>
+		<text name="configuration_nakleyka">                <en>Sticker</en>      <ru>Наклейка</ru> </text>
+		<text name="configuration_1">                       <en>1</en></text>
+		<text name="configuration_2">                       <en>2</en></text>
+		<text name="configuration_3">                       <en>3</en></text>
+		<text name="configuration_4">                       <en>4</en></text>
+		<text name="configuration_5">                       <en>5</en></text>
+		<text name="configuration_6">                       <en>6</en></text>
+		<text name="configuration_7">                       <en>7</en></text>
+		<text name="configuration_8">                       <en>8</en></text>
+		<text name="configuration_9">                       <en>9</en></text>
+		<text name="configuration_10">                      <en>10</en></text>
+		<text name="no"> <en>No</en> <ru>Нет</ru> </text>
+		<text name="configuration_tinted_glass"> <en>Tinted glass</en> <ru>Тонировка окон</ru> </text>
+        <text name="configuration_InteriorDesign">
+			<en>Interior design</en>
+			<de>Salon-Design</de>
+			<ru>Дизайн салона</ru>
+		</text>
+		<text name="configuration_InteriorLambreken">
+			<en>Curtains</en>
+			<de>Vorhänge</de>
+			<ru>Шторы</ru>
+		</text>
+		<text name="configuration_InteriorLambrekenBack">
+			<en>Rear</en>
+			<de>Hinter</de>
+			<ru>Задний</ru>
+		</text>
+		<text name="configuration_InteriorLambrekenSide">
+			<en>Side</en>
+			<de>Seitliche</de>
+			<ru>Боковые</ru>
+		</text>
+		<text name="configuration_InteriorLambrekenStitching">
+			<en>Lambrequin</en>
+			<de>Lambrequin</de>
+			<ru>Ламбрекен</ru>
+		</text>		
+		
+		<text name="actionIC_IC">        				<en>Interactive control</en>         		<de>Interactive Control</de>      			<ru>Интерактивное Управление</ru> </text>
+        <text name="actionIC_SIC">        				<en>No IC</en>         						<de>No IC</de>      						<ru>Без Анимаций</ru> </text>
+        <text name="actionIC_Animation">        		<en>Animation</en>         					<de>Animationen</de>      					<ru>Анимации</ru> </text>
+		<text name="actionIC_fold">        				<en>IC: Close</en>         					<de>IC: Schließen</de>      				<ru>IC: Закрыть</ru> </text>
+        <text name="actionIC_unfold">        			<en>IC: Open</en>         					<de>IC: öffnen</de>      					<ru>IC: Открыть</ru> </text>
+    </l10n>
+
+	<brands>
+        <brand name="BELSHINA" title="БЕЛШИНА" image="wheels/brand_belshina.dds"/>
+    </brands>
+	
+    <storeItems>
+		<storeItem xmlFilename="rsmTorum740.xml" rootNode="vehicle"/>
+        <storeItem xmlFilename="rsmPowerStream900.xml" rootNode="vehicle"/>	
+        <storeItem xmlFilename="UniCart_3000.xml" rootNode="vehicle"/>	
+        <storeItem xmlFilename="powerStream700.xml" rootNode="vehicle"/>		
+    </storeItems>
+</modDesc>
+

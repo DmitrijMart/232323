@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="DDRLampa" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="9" filename="$data/shared/assets/assetLibraryDecals_diffuse.png"/>
+    <File fileId="10" filename="$data/shared/assets/assetLibraryDecals_normal.png"/>
+    <File fileId="11" filename="$data/shared/assets/assetLibraryDecals_vmask.dds"/>
+    <File fileId="8" filename="$data/shared/clearPlastic_diffuse.png"/>
+    <File fileId="2" filename="rear3DDRLight_normal.dds"/>
+    <File fileId="3" filename="rear3DDRLight_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="assetLibraryDecals_mat" materialId="4" customShaderId="4" customShaderVariation="Decal_colorMask">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="11"/>
+      <CustomParameter name="RDT" value="1 1 5 5"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.5 0.5 0.5 2"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="rear3DDRLight_mat" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.5 0 2"/>
+      <CustomParameter name="colorMat2" value="0.03 0.03 0.03 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="rear3DDRLightGlass_mat" materialId="6" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.5 0 0 3"/>
+      <CustomParameter name="colorMat1" value="1 0.2 0 3"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="rear3DDRLight_01.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="rear3DDRLight01Left" clipDistance="300" nodeId="28" materialIds="5" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="staticGlass" clipDistance="300" nodeId="29" materialIds="6" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="staticTurnLight" clipDistance="300" nodeId="30" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="4" name="staticGlassTurnLight" clipDistance="300" nodeId="31" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="5" name="staticDefaultLight" clipDistance="300" nodeId="32" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="6" name="staticGlassDefaultLight" clipDistance="300" nodeId="33" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="7" name="staticBrakeLight" clipDistance="300" nodeId="34" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="8" name="staticGlassBrakeLight" clipDistance="300" nodeId="35" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </Shape>
+        <Shape shapeId="9" name="rivet01_decal4" clipDistance="30" nodeId="36" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1">
+          <Shape shapeId="10" name="rivet01_decal4" clipDistance="30" nodeId="37" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+        </Shape>
+      </Shape>
+      <Shape shapeId="11" name="rear3DDRLight01Right" clipDistance="300" nodeId="38" materialIds="5" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="12" name="staticGlass" clipDistance="300" nodeId="39" materialIds="6" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="13" name="staticTurnLight" clipDistance="300" nodeId="40" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="14" name="staticGlassTurnLight" clipDistance="300" nodeId="41" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="15" name="staticDefaultLight" clipDistance="300" nodeId="42" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="16" name="staticGlassDefaultLight" clipDistance="300" nodeId="43" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="17" name="staticBrakeLight" clipDistance="300" nodeId="44" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="18" name="staticGlassBrakeLight" clipDistance="300" nodeId="45" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </Shape>
+        <Shape shapeId="19" name="rivet01_decal4" clipDistance="30" nodeId="46" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1">
+          <Shape shapeId="20" name="rivet01_decal4" clipDistance="30" nodeId="47" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+        </Shape>
+      </Shape>
+  </Scene>
+
+</i3D>

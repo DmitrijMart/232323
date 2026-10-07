@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<light>
+    <filename>lights/workingLightSquare_03.i3d</filename>
+    <rootNode node="0" />
+    <defaultLight node="0|1" lightTypes="0 3"  intensity="1"/>
+    <rotationNode1 node="0" />
+</light>

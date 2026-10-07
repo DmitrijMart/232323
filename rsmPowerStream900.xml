@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="cutter">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+	
+    <storeData>
+        <name>Power Stream 900</name>
+		<specs>
+            <workingWidth>9.0</workingWidth>
+            <combination xmlFilename="rsmTorum740.xml"/>
+			<combination xmlFilename="UniCart_3000.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>huds/store900.dds</image>
+        <price>40000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>ROSTSELMASH</brand>
+        <category>cutters</category>
+    </storeData>
+	
+    <base>
+        <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+        <filename>rsmPowerStream900.i3d</filename>
+        <size width="10.5" length="3" height="4.2"/>
+        <speedLimit value="10"/>
+        <components>
+            <component centerOfMass="0 0 0" mass="2000"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="COMBINE_HEADER" />
+        <mapHotspot type="CUTTER" />
+    </base>
+
+	<attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="0>0" jointType="cutter">
+                <heightNode node="0>3"/>
+                <distanceToGround lower="0.8" upper="1.3"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+    </attachable>
+	
+	<powerTakeOffs>
+        <input inputNode="0>6" inputAttacherJointIndices="1" aboveAttacher="true" ptoName="LEFT_PTO"/>
+    </powerTakeOffs>
+	
+	<workAreas>
+        <workArea type="cutter" functionName="processCutterArea" >
+            <area startNode="0>1" widthNode="0>2" heightNode="0>3" />
+            <groundReferenceNode index="1" />
+			<testAreas autoGenerate="true" zOffset="0.5" xOffset="0" length="0.6" numAreas="6" areaWidthScale="0.25"/>
+        </workArea>
+    </workAreas>	
+	
+	<turnOnVehicle turnedOnByAttacherVehicle="true">
+        <turnedOnAnimation name="turnedOnAnimation" speedScale="9" turnOnFadeTime="5" turnOffFadeTime="4"/>
+        <sounds>
+            <start file="sounds/1020sicklestart.ogg" innerRadius="5.0" outerRadius="50.0" linkNode="0>14" >
+                <volume indoor="2" outdoor="4" />
+				<pitch indoor="0.88" outdoor="0.88" />
+                <lowpassGain indoor="0.25" outdoor="1.0" />
+            </start>
+			
+			<work file="sounds/1020sicklerun.ogg" linkNode="0>14" innerRadius="5.0" outerRadius="50.0">
+				<volume indoor="2" outdoor="4" />
+				<pitch indoor="0.88" outdoor="0.88" />
+				<lowpassGain indoor="0.25" outdoor="1.0" />
+			</work>
+			
+			<stop file="sounds/1020sicklestop.ogg" innerRadius="5.0" outerRadius="50.0" linkNode="0>14" >
+                <volume indoor="2" outdoor="4" />
+				<pitch indoor="0.88" outdoor="0.88" />
+                <lowpassGain indoor="0.25" outdoor="1.0" />
+            </stop>
+        </sounds>
+    </turnOnVehicle>
+	
+	<groundReferenceNodes>
+        <groundReferenceNode node="0>11" threshold="0.4" />
+    </groundReferenceNodes>
+
+	<animations>
+		<animation name="moveSupport">
+            <part node="0>13|1|0" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="0 -0.276 0"/>
+			<part node="0>13|0" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="0 -0.278 0"/>
+			<part node="0>13|2" startTime="0" endTime="0.5" startTrans="1.364 0.599 -1.238" endTrans="1.364 0.172 -1.238"/>
+        </animation>
+		<animation name="LeftBok">
+            <part node="0>15|0" startTime="0" endTime="0.8" startRot="30.018 -0.349 0.615" endRot="13.006 -27.297 63.28"/>
+            <sound template="metalOpen"  startTime="0.01" direction="1"  volumeScale="1.5" pitchScale="0.9" linkNode="0"/>
+			<sound template="metalClose" startTime="4" direction="1"  volumeScale="1.5" pitchScale="1.3" linkNode="0"/>
+			<sound template="metalClose" startTime="0.01" direction="-1"  volumeScale="1.5" pitchScale="1.3" linkNode="0"/>
+        </animation>
+    </animations>
+	
+	<interactiveControl>
+        <interactiveControlConfigurations    title="$l10n_actionIC_Animation">
+			<interactiveControlConfiguration name="$l10n_actionIC_SIC"/>
+            <interactiveControlConfiguration name="$l10n_actionIC_IC">
+		    <interactiveControls>
+			<outdoorTrigger node="0>16" />
+				<interactiveControl posText="$l10n_actionIC_closeDoor" negText="$l10n_actionIC_openDoor" >
+				    <clickPoint node="0>15|0|1" size="0.04" type="OUTDOOR" iconType="CROSS"/>
+				    <animation name="LeftBok" speedScale="1.0" initTime="0.0" />
+				</interactiveControl>
+				
+				</interactiveControls>	
+			</interactiveControlConfiguration>
+        </interactiveControlConfigurations>
+	</interactiveControl>
+	
+    <cylindered>
+        <movingTools>
+            <movingTool node="0>7|1|0">		
+                <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="false"/>
+                <translation transSpeed="0.09" transAcceleration="35" transMax="1.26" transMin="1.05" translationAxis="3"/>
+            </movingTool>
+            <movingTool node="0>7|1">
+                <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="false"/>
+                <rotation rotSpeed="10" rotAcceleration="50" rotMax="22" rotMin="0"/>
+                <dependentPart node="0>7|2"/>
+                <dependentPart node="0>7|1|1"/>
+                <dependentPart node="0>7|6|0"/>
+            </movingTool>
+            <movingTool node="0>7|1|0|0|1">
+                <dependentPart node="0>7|1|0|0|0|0"/>
+                <dependentPart node="0>7|1|0|0|0|1"/>
+                <dependentPart node="0>7|1|0|0|0|2"/>
+                <dependentPart node="0>7|1|0|0|0|3"/>
+                <dependentPart node="0>7|1|0|0|0|4"/>
+            </movingTool>
+        </movingTools>	
+		
+        <movingParts>
+            <movingPart node="0>7|1|0|0|0|0" referencePoint="0>7|1|0|0|1|0" referenceFrame="0>7|1|0|0|3"/>
+            <movingPart node="0>7|1|0|0|0|1" referencePoint="0>7|1|0|0|1|1" referenceFrame="0>7|1|0|0|3"/>
+            <movingPart node="0>7|1|0|0|0|2" referencePoint="0>7|1|0|0|1|2" referenceFrame="0>7|1|0|0|3"/>
+            <movingPart node="0>7|1|0|0|0|3" referencePoint="0>7|1|0|0|1|3" referenceFrame="0>7|1|0|0|3"/>
+            <movingPart node="0>7|1|0|0|0|4" referencePoint="0>7|1|0|0|1|4" referenceFrame="0>7|1|0|0|3"/>
+            <movingPart node="0>7|2" referencePoint="0>7|1|2" referenceFrame="0>7|5">
+                <translatingPart node="0>7|2|0"/>
+                <dependentPart node="0>7|2|1"/>
+                <dependentPart node="0>7|6|0|0"/>
+            </movingPart>
+            <movingPart node="0>7|2|1" referencePoint="0>7|3" referenceFrame="0>" scaleZ="true"/>
+            <movingPart node="0>7|1|1" referencePoint="0>7|4" localReferencePoint="0>7|1|1|0" referenceFrame="0>7|1|3">
+                <dependentPart node="0>7|1|1|0"/>
+                <dependentPart node="0>7|1|1|1"/>
+                <dependentPart node="0>7|6|0|0"/>				
+            </movingPart>
+            <movingPart node="0>7|1|1|0" referencePoint="0>7|4" referenceFrame="0>7|4" scaleZ="true"/>
+            <movingPart node="0>7|1|1|1" referencePoint="0>7|1|0|0|2" referenceFrame="0>7|1|0|0|2">
+                <translatingPart node="0>7|1|1|1|0"/>
+            </movingPart>
+            <movingPart node="0>7|6|0|0" referenceFrame="0>7|1|1|1|1" moveToReferenceFrame="true"/>
+            <movingPart node="0>7|6|0" referenceFrame="0>7|1"/>	
+        </movingParts>
+        <sounds>
+            <hydraulic template="defaultHydraulicSound"/>
+        </sounds>
+    </cylindered>
+	
+	<connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric"     node="0>12|3"       length="1.4" diameter="0.008" outgoingAdapter="DEFAULT" adapterType="NONE" socket="electric"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="0>12|0"  length="1.4" diameter="0.015" outgoingAdapter="DEFAULT" adapterType="NONE" socket="hydraulic01"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="0>12|1" length="1.4" diameter="0.015" outgoingAdapter="DEFAULT" adapterType="NONE" socket="hydraulic01"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="0>12|2"  length="1.4" diameter="0.015" outgoingAdapter="DEFAULT" adapterType="NONE" socket="hydraulic01"/>
+    </connectionHoses>
+	
+    <cutter fruitTypeCategories="grainHeader">
+        <animationNodes>
+            <animationNode node="0>7|0" rotSpeed="800" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="0>7|1|0|0|0" rotSpeed="200" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="0>7|1|0|0|1" rotSpeed="200" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        </animationNodes>
+		
+		 <effect>
+            <effectNode effectClass="CutterMotionPathEffect" effectType="CUTTER" linkNode="0>10|0">
+                <motionPathEffect textureFilename="$data/vehicles/rostselmash/powerStream500/drumArray.dds" numRows="32" rowLength="42" minFade="0.06" textureRealWidth="16" speedScale="0.17"/>
+            </effectNode>
+            <effectNode effectClass="ParticleEffect" effectNode="0>10|1" particleType="SMOKE" materialType="smokeParticle" emitCountScale="0.1" worldSpace="false" useCuttingWidth="false"/>
+        </effect>
+		
+		<sounds>
+            <cut template="cropCutting" />
+        </sounds>
+    </cutter>	
+	
+    <dynamicMount forceLimitScale="1"/>
+	
+	
+
+	
+	
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2"/>
+	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+	
+    <ai>
+        <areaMarkers leftNode="0>4" rightNode="0>5" backNode="0>14"/>
+        <sizeMarkers leftNode="0>15" rightNode="0>16" backNode="0>17"/>
+		<collisionTrigger node="0>8" width="9.6" height="2.0"/>
+		<agentAttachment width="10.0" height="2" length="3.2" lengthOffset="-0.3"/>
+    </ai>
+	
+</vehicle>

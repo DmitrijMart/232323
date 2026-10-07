@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<light>
+    <filename>lights/lights.i3d</filename>
+    <rootNode node="1" />
+    <defaultLight node="1|0" lightTypes="0 1 2" intensity="45"/>
+    <defaultLight node="1|1" lightTypes="0 1 2" intensity="10"/>
+</light>

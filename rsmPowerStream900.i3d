@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="rsmPowerStream900.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.6"/>
+  </Asset>
+
+  <Files>
+    <File fileId="10" filename="textures/rsmPowerStream900Decals_diffuse.dds"/>
+    <File fileId="13" filename="textures/rsmPowerStream900_diffuse.dds"/>
+    <File fileId="3" filename="textures/rsmPowerStream900_normal.dds"/>
+    <File fileId="4" filename="textures/rsmPowerStream900_specular.dds"/>
+    <File fileId="15" filename="textures\rsmPowerStream900Decals_diffuse.dds"/>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="12" filename="$data/shared/connectionHoses/hoses1_vmask.dds"/>
+    <File fileId="11" filename="$data/shared/default_normal.dds"/>
+    <File fileId="19" filename="$data/vehicles/rostselmash/powerStream500/powerStream500_normal.png"/>
+    <File fileId="20" filename="$data/vehicles/rostselmash/powerStream500/powerStream500_vmask.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="" materialId="5" customShaderId="5">
+      <Texture fileId="15"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="decals_PS900_mat" materialId="6" alphaBlending="true" customShaderId="5">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+    </Material>
+    <Material name="grainExtensions_mat" materialId="7" diffuseColor="0.2 0.2 0.2 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="colorMat0" value="0.369 0.012 0.012 16"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0 0 0 1" specularColor="0.0941177 1 0.0941177">
+    </Material>
+    <Material name="lambert1" materialId="9" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="lambert1" materialId="10" diffuseColor="0.776471 0.776471 0.776471 1">
+    </Material>
+    <Material name="lambert1" materialId="11" diffuseColor="1 1 1 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="colorMat0" value="0.098 0.098 0.098 0"/>
+      <CustomParameter name="colorMat1" value="0.098 0.098 0.098 0"/>
+      <CustomParameter name="colorMat2" value="0.098 0.098 0.098 1"/>
+      <CustomParameter name="colorMat3" value="0.098 0.098 0.098 1"/>
+      <CustomParameter name="colorMat4" value="0.098 0.098 0.098 1"/>
+      <CustomParameter name="colorMat5" value="0.098 0.098 0.098 1"/>
+      <CustomParameter name="colorMat6" value="0.098 0.098 0.098 1"/>
+    </Material>
+    <Material name="powerStream500_mat" materialId="148" diffuseColor="0.8 0.8 0.8 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="20"/>
+      <CustomParameter name="colorMat0" value="0 0 0 1"/>
+    </Material>
+    <Material name="PS900_mat" materialId="12" diffuseColor="0.8 0.8 0.8 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="colorMat0" value="0.098 0.098 0.098 0"/>
+      <CustomParameter name="colorMat1" value="0.916 0.916 0.916 0"/>
+    </Material>
+    <Material name="ps900_mat" materialId="13" diffuseColor="0.8 0.8 0.8 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="colorMat1" value="0.916 0.916 0.916 0"/>
+    </Material>
+    <Material name="rsmPowerStream900_mat" materialId="14">
+    </Material>
+    <Material name="rsmPowerStream900_mat" materialId="15" customShaderId="5">
+      <Texture fileId="13"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂµÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ».002" materialId="16" customShaderId="5">
+      <Texture fileId="15"/>
+      <Glossmap fileId="12"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="rsmPowerStream900.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="rostselmashPowerStream900" dynamic="true" compound="true" collisionMask="2105344" density="0.15" clipDistance="300" nodeId="42" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <TransformGroup name="attacherJoint" translation="2.78364e-07 1.14085 -0.909812" rotation="90 -80 -90" nodeId="43"/>
+        <TransformGroup name="workAreaStart" translation="4.5 0.0769944 0.200869" nodeId="44"/>
+        <TransformGroup name="workAreaWidth" translation="-4.5 0.0769944 0.200869" nodeId="45"/>
+        <TransformGroup name="workAreaHeight" translation="4.5 0.0769944 -0.799131" nodeId="46"/>
+        <TransformGroup name="aiMarkerLeft" translation="4.5 0.0769944 0.200869" nodeId="47"/>
+        <TransformGroup name="aiMarkerRight" translation="-4.5 0.0769944 0.200869" nodeId="48"/>
+        <TransformGroup name="pto" translation="2.81009 0.494732 -1.0808" rotation="-0 90 0" nodeId="49"/>
+        <Shape shapeId="2" name="PS900_vis" rotation="9.33467e-06 -0 0" nodeId="50" materialIds="12" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="udimmainDrum" translation="0 0.552994 -0.566944" nodeId="51" materialIds="11" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="4" name="udim:reelArm" translation="0 1.25799 -0.828131" rotation="22 -0 0" nodeId="52" materialIds="11" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="reelMoverTrans" translation="-0.0747145 0.181 1.26002" nodeId="53">
+              <Shape shapeId="5" name="udim:reelMover" translation="0 0 -0.15" nodeId="54" materialIds="11" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="6" name="udim:reel" translation="0.075 0.0746045 -0.0254144" rotation="-21.987 0 0" nodeId="55" materialIds="11" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="7" name="udim:spike1" translation="3.7e-07 0.153 0.542412" rotation="88.182 180.253 0" nodeId="56" materialIds="11" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="7" name="spike2" translation="3.7e-07 0.567 0.0225119" rotation="87.477 180 0" nodeId="57" materialIds="11" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="7" name="spike3" translation="3.7e-07 0.2 -0.533188" rotation="88.182 180.253 0" nodeId="58" materialIds="11" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="7" name="spike4" translation="3.7e-07 -0.442 -0.354188" rotation="88.182 180.253 0" nodeId="59" materialIds="11" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="7" name="spike5" translation="3.7e-07 -0.471 0.309412" rotation="88.182 180.253 0" nodeId="60" materialIds="11" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+                <Shape shapeId="8" name="udim:reel2" translation="-4.3 0.004 -0.00039456" rotation="-21.987 0 0" nodeId="61" materialIds="11" castsShadows="true" receiveShadows="true">
+                  <TransformGroup name="spike1Ref" translation="4.37461 0.152 0.543283" rotation="88.182 180.253 0" nodeId="62"/>
+                  <TransformGroup name="spike2Ref" translation="4.37461 0.566955 0.0224831" rotation="87.4773 180 0" nodeId="63"/>
+                  <TransformGroup name="spike3Ref" translation="4.37461 0.199855 -0.533017" rotation="87.6236 180 0" nodeId="64"/>
+                  <TransformGroup name="spike4Ref" translation="4.37461 -0.441845 -0.355717" rotation="86.3086 180 0" nodeId="65"/>
+                  <TransformGroup name="spike5Ref" translation="4.37461 -0.471545 0.309483" rotation="87.5858 180 0" nodeId="66"/>
+                </Shape>
+                <TransformGroup name="hydraulicReelMoverRef" translation="-4.37679 0.054 -0.105548" rotation="2.684 0.000206905 -8.35418e-05" nodeId="67"/>
+                <TransformGroup name="spikeRefFrame" translation="0.0747145 0.348211 0.446481" rotation="-69.8301 -0.234546 179.905" nodeId="68"/>
+                <Shape shapeId="9" name="decalsReelMover" translation="0.0747145 -1.52708 -0.488025" rotation="-21.9874 0 0" clipDistance="50" nodeId="69" materialIds="6" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              </Shape>
+            </TransformGroup>
+            <Shape shapeId="10" name="udim:hydraulicReelMoverRot" translation="0 0.147 0.621809" rotation="119.161 0 180" nodeId="70" materialIds="11" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="11" name="udim:hydraulicReelMoverRotPart" translation="0 0 0.159" rotation="144.84 0 0" nodeId="71" materialIds="11" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="12" name="udim:hydraulicReelMover" translation="4.451 0.156063 0.0350596" rotation="121.845 -2.787e-05 -180" nodeId="72" materialIds="11" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="13" name="udim:hydraulicReelMoverPunch" translation="0.001 -4.583e-05 0.413901" nodeId="73" materialIds="11" castsShadows="true" receiveShadows="true"/>
+                <TransformGroup name="jointEndRef" translation="4.451 0.0354925 0.271023" rotation="-2.671 -0.000202766 9.31386e-05" nodeId="74"/>
+              </Shape>
+            </Shape>
+            <TransformGroup name="hydraulicReelArmRef" translation="0 0.0612762 0.754118" nodeId="75"/>
+            <TransformGroup name="hydraulicReelMoverRotRefFrame" translation="-1.20334e-15 -0.542797 0.320651" rotation="119.161 0 180" nodeId="76"/>
+          </Shape>
+          <Shape shapeId="14" name="udim:hydraulicReelArm" translation="5.7e-07 0.386994 -0.300801" rotation="-73.179 -1.62844e-12 6.51378e-12" nodeId="77" materialIds="11" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="15" name="udim:hydraulicReelArmPunch" translation="1.53e-06 -0.002 0.674475" nodeId="78" materialIds="11" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="udim:hydraulicReelArmPipe" translation="-4.494 0.01448 0.150824" rotation="60.106 1.61191 174.659" nodeId="79" materialIds="11" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <TransformGroup name="hydraulicReelArmPipeRef" translation="-4.44175 1.10899 -0.810094" rotation="133.36 5.57852 -180" nodeId="80"/>
+          <TransformGroup name="hydraulicReelMoverRotRef" translation="-2.84217e-14 0.970994 -0.401331" rotation="-117.986 -5.00896e-06 -180" nodeId="81"/>
+          <TransformGroup name="hydraulicReelArmRefFrame" translation="5.72205e-07 0.387153 -0.300801" rotation="-73.179 -1.95318e-05 6.46073e-05" nodeId="82"/>
+          <TransformGroup name="root" translation="0 1.25799 -0.828131" rotation="22 -0 0" nodeId="83">
+            <TransformGroup name="rot" translation="0 0.277 -2.13163e-16" nodeId="84">
+              <TransformGroup name="end" translation="0 0 1.35" nodeId="85"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape shapeId="17" name="pipes" translation="0 0.0769943 -0.799131" rotation="-9.33467e-06 -0 0" clipDistance="50" nodeId="86" materialIds="15" castsShadows="true" receiveShadows="true" skinBindNodeIds="83 84 85"/>
+          <Shape shapeId="18" name="decals_PS900" visibility="false" nodeId="87" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="19" name="supportArms" translation="0 0.0769943 -0.799131" rotation="-9.33467e-06 -0 0" visibility="false" clipDistance="75" nodeId="88" materialIds="14" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="20" name="grainExtensions" rotation="9.33467e-06 -0 0" clipDistance="300" nodeId="89" materialIds="7" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+          <Shape shapeId="21" name="dekka" rotation="-4.32571e-06 -0 0" nodeId="90" materialIds="16" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <TransformGroup name="aiCollisionTrigger" translation="0 0.560747 0" nodeId="91"/>
+        <TransformGroup name="testAreas" translation="0 0.0769944 -1.117" nodeId="92">
+          <TransformGroup name="testAreaStart1" translation="4.5073 0.193164 0.986746" nodeId="93">
+            <TransformGroup name="testAreaWidth1" translation="-0.9014 0 0" nodeId="94"/>
+            <TransformGroup name="testAreaHeight1" translation="0 0 0.939" nodeId="95"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart2" translation="3.606 0.193164 0.986746" nodeId="96">
+            <TransformGroup name="testAreaWidth2" translation="-0.9014 0 0" nodeId="97"/>
+            <TransformGroup name="testAreaHeight2" translation="0 0 0.939" nodeId="98"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart3" translation="2.705 0.193164 0.986746" nodeId="99">
+            <TransformGroup name="testAreaWidth3" translation="-0.9014 0 0" nodeId="100"/>
+            <TransformGroup name="testAreaHeight3" translation="0 0 0.939" nodeId="101"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart4" translation="1.804 0.193164 0.986746" nodeId="102">
+            <TransformGroup name="testAreaWidth4" translation="-0.9014 0 0" nodeId="103"/>
+            <TransformGroup name="testAreaHeight4" translation="0 0 0.939" nodeId="104"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart5" translation="0.903 0.193164 0.986746" nodeId="105">
+            <TransformGroup name="testAreaWidth5" translation="-0.903 0 0" nodeId="106"/>
+            <TransformGroup name="testAreaHeight5" translation="0 0 0.939" nodeId="107"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart6" translation="0 0.193164 0.986746" nodeId="108">
+            <TransformGroup name="testAreaWidth6" translation="-0.903 0 0" nodeId="109"/>
+            <TransformGroup name="testAreaHeight6" translation="0 0 0.939" nodeId="110"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart7" translation="-0.903 0.193164 0.986746" nodeId="111">
+            <TransformGroup name="testAreaWidth7" translation="-0.901 0 0" nodeId="112"/>
+            <TransformGroup name="testAreaHeight7" translation="0 0 0.939" nodeId="113"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart8" translation="-1.802 0.193164 0.986746" nodeId="114">
+            <TransformGroup name="testAreaWidth8" translation="-0.901 0 0" nodeId="115"/>
+            <TransformGroup name="testAreaHeight8" translation="0 0 0.939" nodeId="116"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart9" translation="-2.703 0.193164 0.986746" nodeId="117">
+            <TransformGroup name="testAreaWidth9" translation="-0.901 0 0" nodeId="118"/>
+            <TransformGroup name="testAreaHeight9" translation="0 0 0.939" nodeId="119"/>
+          </TransformGroup>
+          <TransformGroup name="testAreaStart10" translation="-3.604 0.193164 0.986746" nodeId="120">
+            <TransformGroup name="testAreaWidth10" translation="-0.901 0 0" nodeId="121"/>
+            <TransformGroup name="testAreaHeight10" translation="0 0 0.939" nodeId="122"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="effectNodes" translation="1.96998e-08 0 -0.22534" rotation="0 -5.00896e-06 0" nodeId="123">
+          <TransformGroup name="cutterEffectLinkNode" translation="0 0.207549 0.283679" nodeId="124"/>
+          <Shape shapeId="20" name="smokeEmitter" translation="-3.48863e-17 0.0494881 0.178368" rotation="4.92115 0 0" visibility="false" nodeId="125" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="GROUDN" translation="0 0.467435 -0.799131" nodeId="126"/>
+        <TransformGroup name="connectionHoses" nodeId="127">
+          <TransformGroup name="hydraulicIn01" translation="1.1535 1.15913 -0.98953" rotation="-110.601 0 0" nodeId="128"/>
+          <TransformGroup name="hydraulicOut01" translation="1.1049 1.15913 -0.991299" rotation="-110.601 0 0" nodeId="129"/>
+          <TransformGroup name="hydraulicIn02" translation="1.153 1.14778 -1.01673" rotation="-110.601 0 0" nodeId="130"/>
+          <TransformGroup name="hydraulicOut02" translation="1.10974 1.14778 -1.01673" rotation="-110.601 0 0" nodeId="131"/>
+        </TransformGroup>
+        <TransformGroup name="Support" nodeId="132">
+          <TransformGroup name="Support" nodeId="133"/>
+          <TransformGroup name="transform" nodeId="134">
+            <TransformGroup name="Support1" nodeId="135"/>
+          </TransformGroup>
+          <TransformGroup name="supportCol1" nodeId="136">
+            <TransformGroup name="supportCol1" nodeId="137"/>
+            <TransformGroup name="supportCol1" nodeId="138">
+              <TransformGroup name="supportCol1" nodeId="139"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="MidPanelRef" nodeId="140"/>
+        <TransformGroup name="anim" nodeId="141">
+          <TransformGroup name="transform" translation="4.48709 0.728274 -0.164229" rotation="30.018 -0.349 0.615" nodeId="142">
+            <Shape shapeId="22" name="krih" translation="0.248989 -0.347906 -0.262351" rotation="-30.1034 2.66804e-08 -1.33402e-08" nodeId="143" materialIds="13" castsShadows="true" receiveShadows="true" distanceBlending="false">
+              <Shape shapeId="23" name="Dek_900" translation="0.00245512 -0.156022 0.0154159" rotation="-4.32571e-06 -0 0" nodeId="144" materialIds="5,5" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <TransformGroup name="transform" translation="0.311885 0.116834 -0.652389" nodeId="145"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape shapeId="24" name="playerTrigger" translation="1.91157 0.387445 -0.437264" rotation="4.5806e-07 88.3944 1.04758e-05" kinematic="true" trigger="true" collisionMask="1048576" nodeId="146" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="25" name="EGR" translation="0 -0.170202 -0.0273417" rotation="90 -0 0" nodeId="152" materialIds="148" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="82">
+      <Attribute name="nts" type="string" value="  "/>
+    </UserAttribute>
+    <UserAttribute nodeId="83">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="84">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="85">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

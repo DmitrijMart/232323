@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="beaconLight01.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.6"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="Beacon_normal.dds"/>
+    <File fileId="3" filename="Beacon_specular.dds"/>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="8" filename="$data/shared/assets/beaconLights/lizard/beaconLightAlpha02_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Beacon1_mat" materialId="5" diffuseColor="1 1 1 1" customShaderId="4" customShaderVariation="staticLight">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="colorMat0" value="0.03 0.03 0.03 1"/>
+      <CustomParameter name="colorMat1" value="1 1 1 4"/>
+    </Material>
+    <Material name="Beacon2_mat" materialId="6" alphaBlending="true" customShaderId="4" customShaderVariation="colorMask">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="colorMat0" value="1 0.15 0 3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="beaconLight01.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="beaconLight01" clipDistance="300" nodeId="11" materialIds="5" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="rotator" clipDistance="300" nodeId="12" materialIds="5" castsShadows="true" receiveShadows="true">
+          <Light name="realLight" translation="3.8147e-08 0.190839 0.0630133" rotation="151.663 0 0" clipDistance="75" nodeId="13" type="spot" color="1 0.423083 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="12" coneAngle="100" dropOff="5"/>
+        </Shape>
+        <Shape shapeId="3" name="glass" translation="0 -0.00205586 0" scale="1 1.05 1" clipDistance="300" nodeId="14" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+  </Scene>
+
+</i3D>

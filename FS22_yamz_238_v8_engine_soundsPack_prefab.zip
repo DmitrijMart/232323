@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+
+<!-- Sound designer: Erlan10 (eFarmer). [eSounds designer Erlan10 (eFarmer)] -->
+
+<!-- Sound files & sound.xml made by Erlan10 (eFarmer) [eSounds designer Erlan10 (eFarmer)] since 2020. -->
+
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineLarge" file="eSounds/yamz238_eSounds_engine_loop.gls">
+                <volume indoor="1.0" outdoor="1.0" />
+			</motor>
+			<motor template="engineLarge" file="eSounds/yamz238_eSounds_exhaust_loop.gls">
+                <volume indoor="1.0" outdoor="1.5" />
+			</motor>
+			<motor template="indoorCabinOldVehicle" innerRadius="5.0" outerRadius="5.0" volumeScale="12.0" supportsReverb="false"/>
+            <gearbox file="$data/sounds/vehicles/transmission/transmissionLoop11.wav" innerRadius="5.0" outerRadius="65.0" fadeIn="0.5" fadeOut="0.5">
+			    <volume indoor="0.3" outdoor="1.0" >
+			        <modifier type="MOTOR_RPM" value="0.00" modifiedValue="0.0" />
+					<modifier type="MOTOR_RPM" value="0.50" modifiedValue="0.50" />
+ 			        <modifier type="MOTOR_RPM" value="1.00" modifiedValue="1.00" />
+					<modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="1.5" />
+					<modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="0.0" />
+					<modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.25" />
+			    </volume>
+			    <pitch indoor="1.0" outdoor="1.0">
+					<modifier type="SPEED" value="0.0" modifiedValue="0.65"/>
+					<modifier type="SPEED" value="22.0" modifiedValue="1.00"/>
+					<modifier type="SUSPENSION" value="-1.0" modifiedValue="0.9" />
+					<modifier type="SUSPENSION" value="-0.5" modifiedValue="0.95" />
+					<modifier type="SUSPENSION" value="0.0" modifiedValue="1.0" />
+					<modifier type="SUSPENSION" value="0.5" modifiedValue="1.05" />
+					<modifier type="SUSPENSION" value="1.0" modifiedValue="1.1" />
+					<modifier type="MOTOR_RPM_REAL" value="850" modifiedValue="0.75" />
+			        <modifier type="MOTOR_RPM_REAL" value="2200" modifiedValue="1.0" />
+			    </pitch>
+			</gearbox>
+			<motor file="$data/sounds/vehicles/transmission/transmissionHarvesterWorkLoop.wav" innerRadius="5.0" outerRadius="65.0" fadeIn="1.0" fadeOut="0.5">
+			    <volume indoor="0.5" outdoor="1.0" >
+			        <modifier type="MOTOR_RPM" value="0.00" modifiedValue="0.0" />
+					<modifier type="MOTOR_RPM" value="0.50" modifiedValue="0.75" />
+ 			        <modifier type="MOTOR_RPM" value="1.00" modifiedValue="1.00" />
+					<modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="1.35" />
+					<modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="0.0" />
+					<modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.0" />
+			    </volume>
+			    <pitch indoor="1.0" outdoor="1.0">
+					<modifier type="SPEED" value="0.0" modifiedValue="0.85"/>
+					<modifier type="SPEED" value="22.0" modifiedValue="1.15"/>
+					<modifier type="SUSPENSION" value="-1.0" modifiedValue="0.9" />
+					<modifier type="SUSPENSION" value="-0.5" modifiedValue="0.95" />
+					<modifier type="SUSPENSION" value="0.0" modifiedValue="1.0" />
+					<modifier type="SUSPENSION" value="0.5" modifiedValue="1.05" />
+					<modifier type="SUSPENSION" value="1.0" modifiedValue="1.1" />
+					<modifier type="MOTOR_RPM_REAL" value="850" modifiedValue="0.75" />
+			        <modifier type="MOTOR_RPM_REAL" value="2000" modifiedValue="1.15" />
+			    </pitch>
+			</motor>
+			<gearGroupLeverStart template="gearDisengaged" volumeScale="0.2" supportsReverb="false"/>
+            <gearGroupLeverEnd template="gearEngaged" volumeScale="0.2" supportsReverb="false"/>
+        </sounds>
+    </motorized>
+	
+	<combine>
+        <sounds>
+            <chopperWork template="harvesterChopper" volumeScale="2.0"/>
+            <chopStraw template="chopStrawDischarge" volumeScale="1.0"/>
+            <dropStraw template="dropStrawDischarge" volumeScale="1.0"/>
+            <fill template="grainTankFill" volumeScale="1.0"/>
+        </sounds>
+    </combine>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01" innerRadius="3.0" outerRadius="5.0" isLocalSound="true" supportsReverb="false">
+                <volume indoor="0.35" outdoor="0.0" />
+                <pitch indoor="1.00" outdoor="1.00" />
+                <lowpassGain indoor="1.00" outdoor="0.50" />
+			</toggleLights>
+            <turnLight template="SWITCH_TURNLIGHT" innerRadius="3.0" outerRadius="5.0" isLocalSound="true" supportsReverb="false">
+                <volume indoor="0.8" outdoor="0.00" />
+                <pitch indoor="0.80" outdoor="0.80" />
+                <lowpassGain indoor="1.00" outdoor="0.50" />
+			</turnLight>
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="HEADER_ATTACH_01"/>
+            <hydraulic template="defaultHydraulicHarvesters"/>
+        </sounds>   
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+    
+    <honk>
+        <sound template="HONK_JD_HARVESTER" volumeScale="4.5"/>
+    </honk>
+</sounds>
+
+<!-- [eSounds's studio by Erlan10 (eFarmer)] since 2020. -->

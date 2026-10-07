@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Don1500_main_component1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="11" filename="$data/shared/assets/lights/lizard/sideMarker11_normal.png"/>
+    <File fileId="12" filename="$data/shared/assets/lights/lizard/sideMarker11_vmask.png"/>
+    <File fileId="8" filename="$data/shared/clearPlastic_diffuse.dds"/>
+    <File fileId="9" filename="$data/shared/default_specular.dds"/>
+    <File fileId="2" filename="../textures/rear3ChamberLight_04_normal.dds"/>
+    <File fileId="3" filename="../textures/rear3ChamberLight_04_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="clearPlastic_mat" materialId="33" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat1" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="Fonari_mat" materialId="4" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Glossmap fileId="9"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0 1"/>
+      <CustomParameter name="colorMat1" value="0.99 0.42 0.01 2"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="Material126" materialId="5" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.79 0.55 0.05 2"/>
+      <CustomParameter name="colorMat1" value="0.98 0.1 0.1 2"/>
+      <CustomParameter name="colorMat2" value="0.89 0.24 0 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="Material126" materialId="6" diffuseColor="1 1 1 1" alphaBlending="true" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.97 0 0 2"/>
+      <CustomParameter name="colorMat4" value="1 0.1 0 2"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="Material26" materialId="7" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.3 0 0 2"/>
+      <CustomParameter name="colorMat1" value="0.3 0 0 2"/>
+      <CustomParameter name="colorMat2" value="0.46 0.25 0 2"/>
+      <CustomParameter name="colorMat3" value="0.81 0.72 0.75 27"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+    <Material name="sideMarker11_mat1" materialId="32" diffuseColor="0.498039 0.498039 0.498039 1" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+      <CustomParameter name="lightControl" value="0 0 0 0"/>
+      <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="svet.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="FonarL" clipDistance="40" nodeId="16" materialIds="6" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="turnBackL" clipDistance="100" nodeId="17" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="GabaritBack1" clipDistance="100" nodeId="18" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="Stop1" clipDistance="100" nodeId="19" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="LampaRedStopL" translation="0.0630367 0.013 -0.000182687" clipDistance="100" nodeId="20" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="LampaRedGabL" translation="0.00109879 0.016 0" clipDistance="100" nodeId="21" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="LampaTurnBackL" translation="-0.0636312 0.014 1.19448e-08" rotation="-90 -8.14222e-13 0" clipDistance="100" nodeId="22" materialIds="4" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="1" name="FonarP" clipDistance="40" nodeId="23" materialIds="6" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="turnBackP" clipDistance="100" nodeId="24" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="GabaritBack2" clipDistance="100" nodeId="25" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="Stop2" clipDistance="100" nodeId="26" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="5" name="LampaRedStopP" translation="0.0630367 0.013 -0.00018269" clipDistance="100" nodeId="27" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="LampaRedGabP" translation="0.00109879 0.016 0" clipDistance="100" nodeId="28" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="LampaTurnBackP" translation="-0.0636312 0.014 1e-08" rotation="-90 -5.00896e-06 0" clipDistance="100" nodeId="29" materialIds="4" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="8" name="sideMarker11Orange" clipDistance="300" nodeId="38" materialIds="32" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="9" name="innerPartStatic" clipDistance="75" nodeId="39" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="10" name="glassStatic" translation="0 0.01785 0" clipDistance="75" nodeId="40" materialIds="33" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+      </Shape>
+  </Scene>
+
+</i3D>

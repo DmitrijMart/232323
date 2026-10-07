@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+
+<!-- Sound designer: Erlan10 (eFarmer). [eSounds designer Erlan10 (eFarmer)] -->
+
+<!-- Sound files & sound.xml made by Erlan10 (eFarmer) [eSounds designer Erlan10 (eFarmer)] since 2020. -->
+
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+		    <motor template="engineLarge" file="eSounds/kraz_engine_eSounds_loop.gls" pitchScale="1.0" volumeScale="2.0">
+			    <volume indoor="0.7" outdoor="1.0" />
+			</motor>
+			<motor template="engineLarge" file="eSounds/kraz_exhaust_eSounds_loop.gls" pitchScale="1.0" volumeScale="1.5" supportsReverb="false">
+			    <volume indoor="0.7" outdoor="1.0" />
+			</motor>
+<!-- INTERIOR CABIN GROUP -->
+            <motor template="engineLarge" file="eSounds/kraz_engine_cabin_eSounds_loop.gls" pitchScale="1.0" volumeScale="2.5" supportsReverb="false">
+			    <volume indoor="1.0" outdoor="0.0" />
+			</motor>
+			<motor template="indoorCabinOldVehicle" innerRadius="1" outerRadius="1" volumeScale="10.0" supportsReverb="false" />
+			<motor file="$data/vehicles/valtra/aSeries/sounds/Cabin_loop.gls" volumeScale="1.3" pitchScale="1.0" innerRadius="0.1" supportsReverb="false" fadeIn="0.2" fadeOut="1">
+                <volume indoor="1" outdoor="0" >
+                    <modifier type="DIFFERENTIAL_SPEED" value="0.0"  modifiedValue="1.00" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="10.0" modifiedValue="1.00" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="25.0" modifiedValue="1.30" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="53.0" modifiedValue="1.40" />
+                </volume>
+                <pitch>
+                    <modifier type="SUSPENSION" value="-0.08" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="-0.02" modifiedValue="1.03" />
+                    <modifier type="SUSPENSION" value="0.0"   modifiedValue="1.0" />
+                    <modifier type="SUSPENSION" value="0.02"  modifiedValue="0.98" />
+                    <modifier type="SUSPENSION" value="0.08"  modifiedValue="0.95" />
+                </pitch>
+                <loopSynthesisRpm>
+                    <modifier type="DIFFERENTIAL_SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="26.0" modifiedValue="0.5" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="53.0" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+            </motor>
+			<motor file="$data/vehicles/valtra/aSeries/sounds/Cabin_loop.gls" volumeScale="1.3" pitchScale="1.0" innerRadius="0.1" supportsReverb="false" fadeIn="0.2" fadeOut="1">
+                <volume indoor="1" outdoor="0" >
+                    <modifier type="DIFFERENTIAL_SPEED" value="0.0"  modifiedValue="1.00" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="10.0" modifiedValue="1.00" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="25.0" modifiedValue="1.30" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="53.0" modifiedValue="1.40" />
+                </volume>
+                <pitch>
+                    <modifier type="SUSPENSION" value="-0.08" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="-0.02" modifiedValue="1.03" />
+                    <modifier type="SUSPENSION" value="0.0"   modifiedValue="1.0" />
+                    <modifier type="SUSPENSION" value="0.02"  modifiedValue="0.98" />
+                    <modifier type="SUSPENSION" value="0.08"  modifiedValue="0.95" />
+                </pitch>
+                <loopSynthesisRpm>
+                    <modifier type="DIFFERENTIAL_SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="26.0" modifiedValue="0.5" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="53.0" modifiedValue="1.0" />
+                </loopSynthesisRpm>
+            </motor>
+			<gearbox file="$data/sounds/vehicles/transmission/transmissionLoop19.ogg" volumeScale="0.8" innerRadius="1" outerRadius="1.0" supportsReverb="false">
+			    <volume indoor="1.0" outdoor="0.0">
+			        <modifier type="DIFFERENTIAL_SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="10.0" modifiedValue="1.0" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="90.0" modifiedValue="1.0" />
+					<modifier type="MOTOR_LOAD" value="-1.00" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.00" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.20" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.45" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.80" modifiedValue="0.8" />
+                    <modifier type="MOTOR_LOAD" value="1.00" modifiedValue="0.7" />
+                    <modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="1.0" />
+                    <modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="0.0" />
+                    <modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.0" />
+			    </volume>
+			    <pitch indoor="1.0" outdoor="1.0" >
+			        <modifier type="SPEED" value="0.0" modifiedValue="0.2"/>
+					<modifier type="SPEED" value="90.0" modifiedValue="0.5"/>
+					<modifier type="SUSPENSION" value="-0.08" modifiedValue="1.07" />
+                    <modifier type="SUSPENSION" value="-0.02" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="0.0" modifiedValue="1.0" />
+                    <modifier type="SUSPENSION" value="0.02" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="0.08" modifiedValue="1.08" />
+			    </pitch>
+			</gearbox>
+<!-- TRANSMISSION GROUPS -->
+			<gearbox file="$data/sounds/vehicles/transmission/transmissionLoop19.ogg" innerRadius="1.0" outerRadius="65.0" volumeScale="0.7" fadeIn="0.3" fadeOut="0.3" supportsReverb="false">
+			    <volume indoor="0.5" outdoor="1.0">
+			        <modifier type="DIFFERENTIAL_SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="5.0" modifiedValue="0.5" />
+                    <modifier type="DIFFERENTIAL_SPEED" value="90.0" modifiedValue="1.0" />
+					<modifier type="MOTOR_LOAD" value="-1.00" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.00" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.20" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.45" modifiedValue="1.0" />
+                    <modifier type="MOTOR_LOAD" value="0.80" modifiedValue="0.8" />
+                    <modifier type="MOTOR_LOAD" value="1.00" modifiedValue="0.7" />
+                    <modifier type="DRIVING_DIRECTION" value="-1.0" modifiedValue="1.0" />
+                    <modifier type="DRIVING_DIRECTION" value="0.00" modifiedValue="0.0" />
+                    <modifier type="DRIVING_DIRECTION" value="1.00" modifiedValue="1.0" />
+			    </volume>
+			    <pitch indoor="1.0" outdoor="1.0">
+					<modifier type="SPEED" value="0.0" modifiedValue="0.7"/>
+					<modifier type="SPEED" value="90.0" modifiedValue="1.2"/>
+					<modifier type="SUSPENSION" value="-0.08" modifiedValue="1.07" />
+                    <modifier type="SUSPENSION" value="-0.02" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="0.0" modifiedValue="1.0" />
+                    <modifier type="SUSPENSION" value="0.02" modifiedValue="1.05" />
+                    <modifier type="SUSPENSION" value="0.08" modifiedValue="1.08" />
+			    </pitch>
+			</gearbox>
+<!-- GEAR LEVER GROUP -->
+			<gearLeverStart template="gearDisengaged" file="eSounds/kraz_gear_1_eSounds.ogg" volumeScale="0.2" supportsReverb="false">
+			    <sourceRandomization file="eSounds/kraz_gear_2_eSounds.ogg"/>
+			    <sourceRandomization file="eSounds/kraz_gear_3_eSounds.ogg"/>
+			    <sourceRandomization file="eSounds/kraz_gear_4_eSounds.ogg"/>
+			</gearLeverStart>
+            <gearLeverEnd template="gearEngaged" file="eSounds/kraz_gear_1_eSounds.ogg" volumeScale="0.2" supportsReverb="false">
+			    <sourceRandomization file="eSounds/kraz_gear_2_eSounds.ogg"/>
+			    <sourceRandomization file="eSounds/kraz_gear_3_eSounds.ogg"/>
+			    <sourceRandomization file="eSounds/kraz_gear_4_eSounds.ogg"/>
+			</gearLeverEnd>
+<!-- AIR GROUP -->
+            <compressedAir template="compressedAir" volumeScale="1.3" pitchScale="0.5" linkNodeOffset="0 1 0"/>
+            <airCompressorRun template="brakeCompressorLarge" file="$data/sounds/vehicles/compressor/compressorLoop2.wav"/>
+            <airCompressorStop template="compressedAir" pitchScale="0.7"/>
+            <airRelease template="TRUCK_BRAKE_REGULATOR_VALVE" pitchScale="0.6"/>
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01" supportsReverb="false"/>
+            <turnLight template="SWITCH_TURNLIGHT" supportsReverb="false"/>
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="TRUCK_ATTACH_01" pitchScale="0.5"/>
+            <detach template="TRUCK_ATTACH_03" pitchScale="0.5"/>
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01"/>
+        </sounds>
+    </drivable>
+
+    <honk>
+        <sound template="HONK_NH_TX32" file="eSounds/kraz_honk_eSounds_loop.ogg" pitchScale="0.8" volumeScale="3.0">
+            <volume indoor="0.3" outdoor="1.0"/>
+		</sound>
+    </honk>
+</sounds>
+
+<!-- [eSounds's studio by Erlan10 (eFarmer)] since 2020. -->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<light>
+    <filename>lights/svet.i3d</filename>
+    <rootNode node="1" />
+    <defaultLight node="1|1" lightTypes="0" intensity="5"/>
+	<defaultLight node="1|4" lightTypes="0" intensity="8"/>
+    <brakeLight node="1|2" intensity="5"/>
+	<brakeLight node="1|3" intensity="8"/>
+    <turnLightRight node="1|0" intensity="5"/>
+	<turnLightRight node="1|5" intensity="8"/>
+</light>

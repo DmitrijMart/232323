@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<light>
+    <filename>lights/rear3DDRLight_01.i3d</filename>
+    <rootNode node="0" />
+    <defaultLight node="0|0|1" lightTypes="0" />
+    <defaultLight node="0|0|1|0" lightTypes="0" intensity="10"/>
+    <brakeLight node="0|0|2" />
+    <brakeLight node="0|0|2|0" intensity="10"/>
+    <turnLightLeft node="0|0|0" />
+    <turnLightLeft node="0|0|0|0" intensity="10"/>
+</light>

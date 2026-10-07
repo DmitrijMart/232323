@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="UniCart_3000.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.6"/>
+  </Asset>
+
+  <Files>
+    <File fileId="18" filename="textures/10.dds"/>
+    <File fileId="11" filename="textures/UniCart_3000_dekaly.dds"/>
+    <File fileId="12" filename="textures/UniCart_3000_dekaly_spec.dds"/>
+    <File fileId="10" filename="textures/UniCart_3000_spec.dds"/>
+    <File fileId="2" filename="wheels/UniCart_3000_wheel_normal.dds"/>
+    <File fileId="3" filename="wheels/UniCart_3000_wheel_spec.dds"/>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="16" filename="$data/shared/assets/assetLibraryDecals_diffuse.dds"/>
+    <File fileId="17" filename="$data/shared/assets/assetLibraryDecals_normal.dds"/>
+    <File fileId="15" filename="$data/shared/assets/wheelChocks/wheelChockSupport_vmask.dds"/>
+    <File fileId="9" filename="$data/shared/default_normal.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="01_default" materialId="5" diffuseColor="0.576471 0.584314 0.584314 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+      <CustomParameter name="colorMat0" value="0.098 0.098 0.098 0"/>
+    </Material>
+    <Material name="02_default" materialId="6" diffuseColor="0.584314 0.584314 0.584314 1" customShaderId="4" customShaderVariation="tirePressureDeformation">
+      <Normalmap fileId="2" bumpDepth="0"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="colorMat0" value="0.9157 0.9157 0.9157 0"/>
+      <CustomParameter name="morphPosition" value="-0.22 -0.4 0.3 0.02"/>
+    </Material>
+    <Material name="03_default_decal" materialId="7" alphaBlending="true" customShaderId="4" customShaderVariation="Decal">
+      <Texture fileId="11"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="assetLibraryDecals_mat" materialId="8" customShaderId="4" customShaderVariation="Decal">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="15"/>
+    </Material>
+    <Material name="default" materialId="9" diffuseColor="0.584314 0.584314 0.584314 1">
+    </Material>
+    <Material name="lambert1" materialId="10" diffuseColor="0.486275 0.494118 0.494118 1">
+    </Material>
+    <Material name="lambert1" materialId="11" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="UnnamedMaterial" materialId="12" customShaderId="4">
+      <Texture fileId="18"/>
+      <Normalmap fileId="9"/>
+    </Material>
+    <Material name="wheelChockSupport_mat" materialId="13" diffuseColor="0.576471 0.576471 0.576471 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="15"/>
+      <CustomParameter name="colorMat0" value="0.369 0.012 0.012 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="UniCart_3000.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="UniCart_3000" dynamic="true" compound="true" collisionMask="2109442" density="0.3" clipDistance="300" nodeId="44" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <TransformGroup name="wheels" nodeId="45">
+          <TransformGroup name="wheel_L1" translation="1.25 0.342 0" nodeId="46">
+            <TransformGroup name="wheel_L2" translation="-0.155 0 0" nodeId="47">
+              <Shape shapeId="2" name="UniCart_3000_hubL" translation="0.215 0 0" nodeId="48" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="wheel_R1" translation="-1.25 0.342 8.69822e-10" nodeId="49">
+            <TransformGroup name="wheel_R2" translation="0.155 0 0" nodeId="50">
+              <Shape shapeId="3" name="UniCart_3000_hubR" translation="-0.215 0 0" nodeId="51" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="wheelChock02_1" translation="-0.052 0.73062 4.4982" rotation="90 -90 0" nodeId="52"/>
+          <TransformGroup name="wheelChock02_2" translation="-0.052 0.73062 4.80014" rotation="90 -90 0" nodeId="53"/>
+        </TransformGroup>
+        <Shape shapeId="4" name="UniCart_3000_longitudinal _beam" nodeId="54" materialIds="5" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="5" name="UniCart_3000_dekaly1" clipDistance="150" nodeId="55" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="6" name="UniCart_3000_extension" nodeId="56" materialIds="5" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="7" name="UniCart_3000_hitch" translation="0 0.72 7.5" nodeId="57" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <TransformGroup name="connectionHoses" nodeId="58">
+            <TransformGroup name="electricNode" translation="0 0.487 7.3" nodeId="59"/>
+            <Shape shapeId="8" name="UniCart_3000_wire" translation="0 0.487 7.3" nodeId="60" materialIds="5" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="electricNode_adapter" translation="-0.058494 -0.019 -0.197475" rotation="90 0 0" nodeId="61"/>
+            </Shape>
+          </TransformGroup>
+          <Shape shapeId="9" name="UniCart_3000_support0" translation="0.13 0.6 4.7" nodeId="62" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="10" name="UniCart_3000_support1" translation="0 0 -0.06" nodeId="63" materialIds="5" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="11" name="UniCart_3000_support_wheel" translation="0 -0.500371 0.065" nodeId="64" materialIds="5" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="12" name="supportCol" translation="0 -0.342 0.0644191" compoundChild="true" collisionMask="2109442" density="0.001" nodeId="65" materialIds="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            </Shape>
+          </Shape>
+          <Shape shapeId="13" name="UniCart_3000_lock1" translation="0.147 0.539778 4.7" nodeId="66" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="13" name="UniCart_3000_lock2" translation="0.09 0.599617 4.64277" visibility="false" nodeId="67" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="UniCart_3000_dekaly3" translation="0 0.568 6" clipDistance="150" nodeId="68" materialIds="7" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="15" name="chockSupport_1" translation="-0.0486316 0.548577 4.5" rotation="90 -90 0" scale="1.1 1 1" nodeId="69" materialIds="13" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="16" name="screwsDecals" clipDistance="50" nodeId="70" materialIds="8" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+          </Shape>
+          <Shape shapeId="15" name="chockSupport_2" translation="-0.0486316 0.549 4.8" rotation="90 -90 0" scale="1.1 1 1" nodeId="71" materialIds="13" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="16" name="screwsDecals" clipDistance="50" nodeId="72" materialIds="8" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+          </Shape>
+          <TransformGroup name="attachable" nodeId="73">
+            <TransformGroup name="attacherJoint" translation="0 0.72 7.5" rotation="0 90 0" nodeId="74"/>
+            <TransformGroup name="cutterJointNodeHeader" translation="-0.732336 0.686332 -0.238312" rotation="-20.5151 -90 0" nodeId="75"/>
+            <TransformGroup name="cutterJointNode" translation="0.215032 0.749305 -2.65241" rotation="-21.5522 -90 0" nodeId="76"/>
+          </TransformGroup>
+        </Shape>
+        <TransformGroup name="UniCart_3000_lengthening" nodeId="77">
+          <Shape shapeId="17" name="UniCart_3000_lengthening1" translation="0 0.6 -2.7" nodeId="78" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="18" name="UniCart_3000_dekaly2" translation="0 0.35 0" clipDistance="150" nodeId="79" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="19" name="10" translation="-0.175595 0.506555 -0.318515" clipDistance="50" nodeId="80" materialIds="12" distanceBlending="false"/>
+            <TransformGroup name="lights" nodeId="81">
+              <TransformGroup name="shared" nodeId="82">
+                <TransformGroup name="rear3DDRLight01Right1" translation="-1.23 0.352 -0.315" rotation="0 180 0" nodeId="83"/>
+                <TransformGroup name="rear3DDRLight01Left1" translation="1.23 0.352 -0.315" rotation="0 180 0" nodeId="84"/>
+                <TransformGroup name="bigTriangle1" translation="0.08 0.433 -0.334858" rotation="90 0 0" nodeId="85"/>
+                <TransformGroup name="yellowTriangle_02_1" translation="-0.86 0.336 -0.313573" rotation="-90 2.22008e-07 180" nodeId="86"/>
+                <TransformGroup name="yellowTriangle_02_2" translation="0.86 0.335669 -0.313573" rotation="-90 0 180" nodeId="87"/>
+                <TransformGroup name="sideMarker_09White1" translation="-1.392 0.355 -0.255763" rotation="90 0 0" nodeId="88"/>
+                <TransformGroup name="sideMarker_09White2" translation="1.392 0.354521 -0.255763" rotation="90 0 0" nodeId="89"/>
+              </TransformGroup>
+              <TransformGroup name="backLights" nodeId="90">
+                <Light name="backLightsHigh1" translation="-1.23 0.352 -0.315" rotation="-15 0 0" clipDistance="75" nodeId="91" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2">
+                  <Light name="backLightsHigh2" translation="2.46 0 0" clipDistance="75" nodeId="92" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2"/>
+                </Light>
+                <Light name="backLightsHigh3" translation="-1.23 0.352 -0.315" rotation="-15 0 0" clipDistance="75" nodeId="93" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="130" dropOff="2">
+                  <Light name="backLightsHigh4" translation="2.46 0 0" clipDistance="75" nodeId="94" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="130" dropOff="2"/>
+                </Light>
+              </TransformGroup>
+              <TransformGroup name="turnLights" nodeId="95">
+                <Light name="turnLightLeftBack1" translation="1.23 0.352 -0.315" rotation="-8 0 0" clipDistance="75" nodeId="96" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="120" dropOff="3"/>
+                <Light name="turnLightRightBack1" translation="-1.23 0.352 -0.315" rotation="-8 0 0" clipDistance="75" nodeId="97" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="120" dropOff="3"/>
+              </TransformGroup>
+            </TransformGroup>
+            <Shape shapeId="20" name="colPart3" translation="3.52601e-16 0 -0.27" compoundChild="true" collisionMask="8194" density="0.01" nodeId="98" materialIds="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <TransformGroup name="licensePlateBack1" translation="0.548119 0.353418 -0.325996" rotation="0 180 0" nodeId="99"/>
+          </Shape>
+          <Shape shapeId="21" name="UniCart_3000_lengthening2" translation="0 0.6 -2.7" visibility="false" nodeId="100" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="18" name="UniCart_3000_dekaly2" clipDistance="150" nodeId="101" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="19" name="10" translation="-0.175595 0.156113 -0.318515" clipDistance="50" nodeId="102" materialIds="12" distanceBlending="false"/>
+            <TransformGroup name="lights" nodeId="103">
+              <TransformGroup name="shared" nodeId="104">
+                <TransformGroup name="rear3DDRLight01Right2" translation="-1.23 0 -0.315" rotation="0 180 0" nodeId="105"/>
+                <TransformGroup name="rear3DDRLight01Left2" translation="1.23 0 -0.315" rotation="0 180 0" nodeId="106"/>
+                <TransformGroup name="bigTriangle2" translation="0.08 0.0774221 -0.334858" rotation="90 -0 0" nodeId="107"/>
+                <TransformGroup name="yellowTriangle_02_3" translation="-0.86 -0.017 -0.313573" rotation="-90 0 180" nodeId="108"/>
+                <TransformGroup name="yellowTriangle_02_4" translation="0.86 -0.017 -0.313573" rotation="-90 0 180" nodeId="109"/>
+                <TransformGroup name="sideMarker_09White3" translation="-1.392 0.003 -0.255763" rotation="90 0 0" nodeId="110"/>
+                <TransformGroup name="sideMarker_09White4" translation="1.392 0.003 -0.255763" rotation="90 0 0" nodeId="111"/>
+              </TransformGroup>
+              <TransformGroup name="backLights" nodeId="112">
+                <Light name="backLightsHigh5" translation="-1.23 0 -0.315" rotation="-15 0 0" clipDistance="75" nodeId="113" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2">
+                  <Light name="backLightsHigh6" translation="2.46 0 0" clipDistance="75" nodeId="114" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2"/>
+                </Light>
+                <Light name="backLightsHigh7" translation="-1.23 0 -0.315" rotation="-15 0 0" clipDistance="75" nodeId="115" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="130" dropOff="2">
+                  <Light name="backLightsHigh8" translation="2.46 0 0" clipDistance="75" nodeId="116" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="3.5" coneAngle="130" dropOff="2"/>
+                </Light>
+              </TransformGroup>
+              <TransformGroup name="turnLights" nodeId="117">
+                <Light name="turnLightLeftBack2" translation="1.23 0 -0.315" rotation="-8 0 0" clipDistance="75" nodeId="118" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="120" dropOff="3"/>
+                <Light name="turnLightRightBack2" translation="-1.23 0 -0.315" rotation="-8 0 0" clipDistance="75" nodeId="119" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="120" dropOff="3"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="licensePlateBack2" translation="0.579682 0.00209605 -0.32186" rotation="0 180 0" nodeId="120"/>
+          </Shape>
+        </TransformGroup>
+        <Shape shapeId="22" name="UniCart_3000_mobile_platform1" translation="0 0.654 1.19" nodeId="121" materialIds="5" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="23" name="UniCart_3000_lodgement1" translation="-0.538624 0.283049 -0.063848" rotation="0 0 -22" nodeId="122" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="24" name="UniCart_3000_support_platform1" translation="0.402121 0.0210184 0" scale="1 0.5 1" nodeId="123" materialIds="5" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="25" name="colPart1" translation="-0.0460057 -0.231035 -0.114645" scale="1 1 0.88" compoundChild="true" collisionMask="8194" density="0.01" nodeId="124" materialIds="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </Shape>
+          <Shape shapeId="26" name="UniCart_3000_lock2_1" translation="0.345237 0.062 0.0194093" nodeId="125" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="22" name="UniCart_3000_mobile_platform2" translation="0 0.653974 -1.59" nodeId="126" materialIds="5" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="23" name="UniCart_3000_lodgement2" translation="-0.538624 0.283049 -0.063848" rotation="0 0 -22" nodeId="127" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="24" name="UniCart_3000_support_platform2" translation="0.402121 0.0210184 0" scale="1 0.5 1" nodeId="128" materialIds="5" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="26" name="UniCart_3000_lock2_2" translation="0.345237 0.0621195 0.0194093" nodeId="129" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="27" name="dynamicMountTrigger" translation="-0.118101 0.663025 -0.2" rotation="0 0 -16" kinematic="true" compound="true" trigger="true" collisionMask="18874368" nodeId="130" materialIds="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="tipOcclusiionAreas" nodeId="131">
+          <TransformGroup name="start" translation="0.75 0 5" nodeId="132"/>
+          <TransformGroup name="width" translation="-0.75 0 5" nodeId="133"/>
+          <TransformGroup name="height" translation="0.75 0 -6" nodeId="134"/>
+        </TransformGroup>
+        <TransformGroup name="collisions" nodeId="135">
+          <Shape shapeId="28" name="colPart4" translation="-0.172731 0.633 -0.66684" rotation="0 -0 -0.590735" compoundChild="true" collisionMask="8194" density="0.01" nodeId="136" materialIds="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="29" name="colPart02" translation="0 0.415187 -0.108878" compoundChild="true" collisionMask="8194" density="0.01" nodeId="137" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <Camera name="camera" translation="0.650561 0.801796 2.70028" rotation="-5.9593 17.8101 8.61721e-07" nodeId="138" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1">
+          <Light name="light" visibility="false" nodeId="139" type="directional" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" numShadowMapSplits="3" shadowMapSplitDistance0="16.5466" shadowMapSplitDistance1="35.9759" range="500"/>
+        </Camera>
+      </Shape>
+  </Scene>
+
+</i3D>
